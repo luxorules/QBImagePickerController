@@ -141,4 +141,9 @@
     [self.delegate assetCell:self didChangeAssetSelectionState:selected atIndex:(assetView.tag - 1)];
 }
 
+- (void)assetViewMaximunNumberOfSelectionReached:(QBImagePickerAssetView *)assetView
+{
+    [self.delegate assetCellMaximunNumberOfSelectionReached:self];
+}
+
 @end

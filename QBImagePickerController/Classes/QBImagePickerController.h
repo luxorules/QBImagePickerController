@@ -28,6 +28,7 @@ typedef NS_ENUM(NSInteger, QBImagePickerFilterType) {
 - (void)imagePickerControllerWillFinishPickingMedia:(QBImagePickerController *)imagePickerController;
 - (void)imagePickerController:(QBImagePickerController *)imagePickerController didFinishPickingMediaWithInfo:(id)info;
 - (void)imagePickerControllerDidCancel:(QBImagePickerController *)imagePickerController;
+- (void)imagePickerControllerMaximunNumberOfSelectionReached:(QBImagePickerController *)imagePickerController;
 - (NSString *)descriptionForSelectingAllAssets:(QBImagePickerController *)imagePickerController;
 - (NSString *)descriptionForDeselectingAllAssets:(QBImagePickerController *)imagePickerController;
 - (NSString *)imagePickerController:(QBImagePickerController *)imagePickerController descriptionForNumberOfPhotos:(NSUInteger)numberOfPhotos;

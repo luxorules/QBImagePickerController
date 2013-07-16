@@ -15,5 +15,6 @@
 @required
 - (BOOL)assetCell:(QBImagePickerAssetCell *)assetCell canSelectAssetAtIndex:(NSUInteger)index;
 - (void)assetCell:(QBImagePickerAssetCell *)assetCell didChangeAssetSelectionState:(BOOL)selected atIndex:(NSUInteger)index;
+- (void)assetCellMaximunNumberOfSelectionReached:(QBImagePickerAssetCell *)assetCell;
 
 @end

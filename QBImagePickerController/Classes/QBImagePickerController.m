@@ -320,6 +320,13 @@
     }
 }
 
+- (void)assetCollectionViewControllerMaximunNumberOfSelectionReached:(QBAssetCollectionViewController *)assetCollectionViewController
+{
+    if ([self.delegate respondsToSelector:@selector(imagePickerControllerMaximunNumberOfSelectionReached:)]) {
+        [self.delegate imagePickerControllerMaximunNumberOfSelectionReached:self];
+    }
+}
+
 - (NSString *)descriptionForSelectingAllAssets:(QBAssetCollectionViewController *)assetCollectionViewController
 {
     NSString *description = nil;

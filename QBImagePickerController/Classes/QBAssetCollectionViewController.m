@@ -440,4 +440,9 @@
     }
 }
 
+- (void)assetCellMaximunNumberOfSelectionReached:(QBImagePickerAssetCell *)assetCell
+{
+    [self.delegate assetCollectionViewControllerMaximunNumberOfSelectionReached: self];
+}
+
 @end

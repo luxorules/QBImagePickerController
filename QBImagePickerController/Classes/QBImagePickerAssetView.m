@@ -105,7 +105,9 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if ([self.delegate assetViewCanBeSelected:self]) {
+    BOOL canBeSelected = [self.delegate assetViewCanBeSelected:self];
+    
+    if (canBeSelected) {
         self.selected = !self.selected;
         
         if (self.allowsMultipleSelection) {
@@ -121,6 +123,8 @@
             self.imageView.image = [self thumbnail];
             
             [self.delegate assetView:self didChangeSelectionState:self.selected];
+        } else if(self.allowsMultipleSelection) {
+            [self.delegate assetViewMaximunNumberOfSelectionReached: self];
         } else {
             self.imageView.image = [self thumbnail];
         }
